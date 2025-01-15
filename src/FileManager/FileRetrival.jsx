@@ -17,8 +17,8 @@ function FileRetrival() {
                 fileName: file[1],
                 uploader: file[2],
             })
-            setFiles(fileArray);
         }
+        setFiles(fileArray);
        } catch (error) {
         console.log("Error in Retrieving Files",error);
        }  
