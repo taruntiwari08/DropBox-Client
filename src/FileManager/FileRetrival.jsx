@@ -7,7 +7,7 @@ function FileRetrival() {
     const triggerUpdate = useContext(FileUpdateContext)
       const fetchFiles = async ()=>{
        try {
-        const contract = getContract();
+        const contract = await getContract();
         const FilesCount  = await contract.getFileCount()
         const fileArray = [];
         for(let i = 0 ; i< FilesCount; i++){

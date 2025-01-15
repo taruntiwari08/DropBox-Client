@@ -19,7 +19,7 @@ const FileUpload = () => {
             setstatus("Uploading file to IPFS...");
             const CID = await uploadToIPFS(file);
             setstatus("Saving Metadata on Ethereum...")
-            const contract = getContract();
+            const contract = await getContract();
             await contract.uploadFile(CID,fileName);
             setstatus("File Successfully Uploaded!")
             setfile(null);
